@@ -1,4 +1,4 @@
-solar-framework
+Sterne Framework
 ===============
 
-Game engine framework. Written in C++ and Lua.
+Game engine framework. Written in C++.
