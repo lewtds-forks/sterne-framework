@@ -7,5 +7,5 @@ Game engine framework. Written in C++ and Python.
 Run **make** in terminal.
 
 ## Run
-**cd build**
+**cd build**  
 **./main**
