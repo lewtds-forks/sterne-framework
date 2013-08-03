@@ -30,8 +30,8 @@ not for 12.04 as the pre-built binary depends on `libGLEW 1.7` whilst 12.04 has
 1.6. People using 12.04 should follow instructions on compiling `libsfml2` below,
 then come back here for instructions for running.
 
-Download the [tarball][1] and extract it inside `sterne-framework` source code
-directory, named as `sfml`. It will have this tree structure:
+Download the pre-compiled [tarball][1] and extract it inside `sterne-framework`
+source code directory, named as `sfml`. It should have this tree structure:
 
     sfml
      |
@@ -44,7 +44,8 @@ directory, named as `sfml`. It will have this tree structure:
 The normal way for `g++` to detect and include these libaries is to have them
 installed in system directories (i.e. `/usr/lib/` and `/usr/include`) but it's
 better to separate system libraries and personal libaries. Run these commands
-to build and run the demo program with our custom libraries:
+to build and run the demo program with our custom libraries, assuming we're
+inside `sterne-framework`'s source code root:
 
     export CPLUS_INCLUDE_PATH=sfml/include
     export LIBRARY_PATH=sfml/lib
@@ -57,7 +58,9 @@ to build and run the demo program with our custom libraries:
 
 #### Building libsfml
 
-This command should install all build-time dependencies (thanks to
+Download the [source code tarball][1] and extract it anywhere you like.
+
+Install all build-time dependencies using this command (thanks to
 the __Debian Games Team__ <pkg-games-devel@lists.alioth.debian.org>):
 
 	sudo apt-get build-dep libsfml-dev
@@ -67,6 +70,9 @@ Then proceed to building `libsfml`:
 	mkdir build
 	cd build
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=sfml ..
-	make -j4
+	make -j4  # Compiling using 4 threads
 	cp -R sfml /path/to/stern-framework/
 
+Now compile and run `sterne-framework` using the same instructions as given above.
+
+[1]: http://www.sfml-dev.org/download/sfml/2.1/SFML-2.1-sources.zip
