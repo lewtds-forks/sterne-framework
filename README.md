@@ -10,8 +10,8 @@ Game engine framework. Written in C++ and Python.
 
 ### Building and running
 
-	$ make
-	$ cd build && ./main
+	make
+	cd build && ./main
 
 ### Building on Ubuntu
 
@@ -46,23 +46,23 @@ installed in system directories (i.e. `/usr/lib/` and `/usr/include`) but it's
 better to separate system libraries and personal libaries. Run these commands
 to build and run the demo program with our custom libraries:
 
-    $ export CPLUS_INCLUDE_PATH=sfml/include
-    $ export LIBRARY_PATH=sfml/lib
-    $ make
-    $ export LD_LIBRARY_PATH=$(pwd)/sfml/lib
-    $ cd build
-    $ ./main
+    export CPLUS_INCLUDE_PATH=sfml/include
+    export LIBRARY_PATH=sfml/lib
+    make
+    export LD_LIBRARY_PATH=$(pwd)/sfml/lib
+    cd build
+    ./main
 
 [1]: http://www.sfml-dev.org/download/sfml/2.1/
 
 #### Building libsfml
 
 This command should install all build-time dependencies (thanks to
-the Debian Games Team <pkg-games-devel@lists.alioth.debian.org>):
+the __Debian Games Team__ <pkg-games-devel@lists.alioth.debian.org>):
 
-	$ sudo apt-get build-dep libsfml-dev
+	sudo apt-get build-dep libsfml-dev
 
-Then proceed to building libsfml:
+Then proceed to building `libsfml`:
 
 	mkdir build
 	cd build
